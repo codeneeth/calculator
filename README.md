@@ -20,7 +20,7 @@ A sleek, mobile-style calculator with a beautiful blurred background. Designed f
 
 ## 🖼️ Preview
 
-> ![Fantasy Calculator Screenshot](preview.png)  
+> ![ Calculator Screenshot](preview.png)  
 > *Beautiful background. Clean UI. Touch-friendly layout.*
 
 ## 📄 License
