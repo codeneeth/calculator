@@ -1,32 +1,29 @@
-const display = document.getElementById('display');
-const buttons = document.querySelectorAll('.btn');
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll(".btn");
 
-let current = '';
-let reset = false;
+let expression = "";
 
 buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const val = button.getAttribute('data-value');
+  button.addEventListener("click", () => {
+    const value = button.textContent;
 
-    if (val === 'C') {
-      current = '';
-      display.textContent = '0';
-    } else if (val === '=') {
+    if (value === "AC") {
+      expression = "";
+      display.textContent = "0";
+    } else if (value === "⌫") {
+      expression = expression.slice(0, -1);
+      display.textContent = expression || "0";
+    } else if (value === "=") {
       try {
-        current = eval(current).toString();
-        display.textContent = current;
-        reset = true;
+        expression = eval(expression).toString();
+        display.textContent = expression;
       } catch {
-        display.textContent = 'Error';
-        current = '';
+        display.textContent = "Error";
+        expression = "";
       }
     } else {
-      if (reset) {
-        current = '';
-        reset = false;
-      }
-      current += val;
-      display.textContent = current;
+      expression += value === "×" ? "*" : value === "÷" ? "/" : value;
+      display.textContent = expression;
     }
   });
 });

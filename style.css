@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+.btn {
+  @apply w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition;
+}
+
+.equals {
+  @apply bg-orange-500 hover:bg-orange-600 text-white;
+}
