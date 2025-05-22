@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calculator</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-cover bg-center flex items-center justify-center min-h-screen" style="background-image: url('124228.jpg');">
   <div class="backdrop-blur-md bg-black/50 rounded-3xl p-4 w-[360px] space-y-4">
-    <div id="display" class="bg-black/30 text-right text-white text-4xl p-6 rounded-xl font-mono overflow-x-auto">0</div>
+    
+    <!-- Display Section -->
+    <div class="bg-black/30 rounded-xl p-4 text-white font-mono text-right">
+      <div id="result" class="text-5xl font-semibold leading-tight">0</div>
+      <div id="expression" class="text-xl text-gray-400 mt-2 break-all">0</div>
+    </div>
+
+    <!-- Button Grid -->
     <div class="grid grid-cols-4 gap-3 text-white text-xl font-semibold">
-      <!-- Top row -->
       <button class="btn">AC</button>
       <button class="btn">%</button>
       <button class="btn">⌫</button>
       <button class="btn">/</button>
 
-      <!-- Number rows -->
       <button class="btn">7</button>
       <button class="btn">8</button>
       <button class="btn">9</button>
@@ -33,7 +38,6 @@
       <button class="btn">3</button>
       <button class="btn">+</button>
 
-      <!-- Bottom row -->
       <button class="btn">00</button>
       <button class="btn">0</button>
       <button class="btn">.</button>
@@ -43,9 +47,10 @@
 
   <footer>
     <div class="absolute bottom-0 left-0 right-0 text-center text-white p-4">
-      <p>Made with ❤️ by <span class="text-red-600"><a href="https://github.com/codeneeth" target="_blank">Praneeth</a></span></p>
+      <p>Made with ❤️ by <a href="https://github.com/codeneeth" class="text-red-500" target="_blank">Praneeth</a></p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
