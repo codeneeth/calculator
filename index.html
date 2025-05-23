@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculator</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-cover bg-center flex items-center justify-center min-h-screen" style="background-image: url('124228.jpg');">
-  <div class="backdrop-blur-md bg-black/50 rounded-3xl p-4 w-[360px] space-y-4">
+<body class="bg-cover bg-center flex items-center justify-center min-h-screen" style="background-image: url('bg.jpg');">
+  <div class="backdrop-blur-md bg-white/10 rounded-3xl p-4 w-full max-w-sm shadow-lg border border-white/20 space-y-4">
+
+    <span class="text-2xl text-white">Calculator</span>
     
-    <!-- Display Section -->
-    <div class="bg-black/30 rounded-xl p-4 text-white font-mono text-right">
-      <div id="result" class="text-5xl font-semibold leading-tight">0</div>
-      <div id="expression" class="text-xl text-gray-400 mt-2 break-all">0</div>
+    <!-- Display -->
+    <div class="text-white font-mono space-y-1 p-4 rounded-xl border border-white/20 shadow-inner bg-white/5">
+      <div id="inputDisplay" class="text-4xl font-bold text-right break-words min-h-[48px]">0</div>
+      <div id="resultDisplay" class="text-lg text-right text-gray-300 h-6"></div>
     </div>
 
-    <!-- Button Grid -->
-    <div class="grid grid-cols-4 gap-3 text-white text-xl font-semibold">
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-3 text-white font-semibold">
       <button class="btn">AC</button>
-      <button class="btn">%</button>
       <button class="btn">⌫</button>
+      <button class="btn">%</button>
       <button class="btn">/</button>
 
       <button class="btn">7</button>
@@ -38,19 +40,16 @@
       <button class="btn">3</button>
       <button class="btn">+</button>
 
-      <button class="btn">00</button>
-      <button class="btn">0</button>
+      <button class="btn col-span-2">0</button>
       <button class="btn">.</button>
-      <button class="btn equals">=</button>
+      <button class="btn equals col-span-1">=</button>
     </div>
   </div>
 
   <footer>
-    <div class="absolute bottom-0 left-0 right-0 text-center text-white p-4">
-      <p>Made with ❤️ by <a href="https://github.com/codeneeth" class="text-red-500" target="_blank">Praneeth</a></p>
-    </div>
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+      <p class="md:text-xl">Made with ❤️ by <span class="text-red-400"><a href="https://github.com/Codeneeth" target="_blank">Praneeth</a></span></p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
